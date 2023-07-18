@@ -1,0 +1,40 @@
+<div class="card">
+
+    <div class="card-header">
+        Lista de Programas
+    </div>
+
+    <div class="card-body">
+        
+        <div class="table-responsive">
+
+            <table class="table table-primary">
+                <thead>
+                    <br>
+                    <tr>
+                        <th scope="col">ID:</th>
+                        <th scope="col">Descripcion:</th>
+                        <th scope="col">Sigla:</th>
+                        <th scope="col">Acciones:</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+
+                    <tr *ngFor = "let programa of programas ; let iControl = index">
+                        <td scope="row">{{programa.ID}}</td>
+                        <td>{{programa.descripcion}}</td>
+                        <td>{{programa.sigla}}</td>
+                        <td>
+                            <a class="btn btn-warning" routerLink="/editar-programa/{{programa.ID}}" class="btn btn-warning">Editar</a>&nbsp;
+                            <a class="btn btn-danger" (click)="borrarPrograma(programa.ID , iControl)" role="button">Eliminar</a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <a class="btn btn-info" routerLink="/agregar-programa" >Agregar un nuevo programa</a>
+ 
+    </div>
+</div>

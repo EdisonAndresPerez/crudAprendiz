@@ -1,0 +1,46 @@
+<div class="card">
+
+    <div class="card-header">
+        Lista de Deserciones
+    </div>
+
+    <div class="card-body">
+        
+        <div class="table-responsive">
+
+            <table class="table table-primary">
+                <thead>
+                    <br>
+                    <tr>
+                        <th scope="col">ID:</th>
+                        <th scope="col">Nombre:</th>
+                        <th scope="col">Apellidos:</th>
+                        <th scope="col">Centro:</th>
+                        <th scope="col">Programa:</th>
+                        <th scoper="col">Acciones:</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+
+                    <tr *ngFor = "let desercion of deserciones  ; let iControl = index">
+                        <td scope="row">{{desercion.ID}}</td>
+                        <td>{{desercion.nombre}}</td>
+                        <td>{{desercion.apellidos}}</td>
+                        <td>{{desercion.centro}}</td>
+                        <td>{{desercion.programa}}</td>
+                        <td>
+                            <a class="btn btn-warning" routerLink="/editar-desercion/{{desercion.ID}}" class="btn btn-warning">Editar</a>&nbsp;
+                            <a class="btn btn-info" routerLink="/ver-desercion/{{desercion.ID}}" class="btn btn-info">Ver Info Completa</a>&nbsp;
+                            <a class="btn btn-danger" (click)="borrarDesercion(desercion.ID , iControl)" role="button">Eliminar</a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <a class="btn btn-info" routerLink="/agregar-desercion" >Agregar una nueva Desercion</a>
+        
+    </div>
+</div>
+

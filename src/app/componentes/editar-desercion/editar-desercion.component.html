@@ -1,0 +1,91 @@
+<div class="card">
+    <div class="card-header">
+        Editar Desercion
+    </div>
+    <div class="card-body">
+        <form (ngSubmit) = "enviarDatos()" [formGroup] = "formularioDeDeserciones">
+
+            <div class="mb-3">
+                <label for="" class="form-label">ID: </label>
+                <input type="text" class="form-control" name="" id="" formControlName="id" aria-describedby="helpId" placeholder="" readonly> 
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Nombre: </label>
+                <input type="text" class="form-control" name="" id="" formControlName="nombre" aria-describedby="helpId" placeholder="">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Apellidos: </label>
+                <input type="text" class="form-control" name="" id="" formControlName="apellidos" aria-describedby="helpId" placeholder="">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Tipo de Documento: </label>
+                <input type="number" class="form-control" name="" id="" formControlName="tipoDocumento" aria-describedby="helpId" placeholder="">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Centro: </label>
+                <input type="tetx" class="form-control" name="" id="" formControlName="centro" aria-describedby="helpId" placeholder="">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Codigo de Centro: </label>
+                <input type="number" class="form-control" name="" id="" formControlName="codigoCentro" aria-describedby="helpId" placeholder="">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Programa: </label>
+                <input type="text" class="form-control" name="" id="" formControlName="programa" aria-describedby="helpId" placeholder="">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Numero de Ficha: </label>
+                <input type="number" class="form-control" name="" id="" formControlName="numeroFicha" aria-describedby="helpId" placeholder="">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Instructor: </label>
+                <input type="text" class="form-control" name="" id="" formControlName="instructor" aria-describedby="helpId" placeholder="">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Fecha de inicio del programa: </label>
+                <input type="date" class="form-control" name="" id="" formControlName="fechaInicioPrograma" aria-describedby="helpId" placeholder="">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Jornada: </label>
+                <input type="text" class="form-control" name="" id="" formControlName="jornada" aria-describedby="helpId" placeholder="">
+            </div>
+            
+            <div class="mb-3">
+                <label for="" class="form-label">Fecha de retiro del programa: </label>
+                <input type="date" class="form-control" name="" id="" formControlName="fechaRetiroPrograma" aria-describedby="helpId" placeholder="">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Causa del retiro: </label>
+                <input type="text" class="form-control" name="" id="" formControlName="causaRetiro" aria-describedby="helpId" placeholder="">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Descripcion de la causa: </label>
+                <input type="text" class="form-control" name="" id="" formControlName="descripcionCausa" aria-describedby="helpId" placeholder="">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Observacion: </label>
+                <input type="text" class="form-control" name="" id="" formControlName="observacion" aria-describedby="helpId" placeholder="">
+            </div>
+
+            <button class="btn btn-success" type="submit">Editar</button> &nbsp;
+            <button class="btn btn-danger" routerLink="/listar-desercion" type="button">Cancelar</button>
+
+        </form>
+    </div>
+    
+</div>
+
+

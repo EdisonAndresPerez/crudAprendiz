@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="card-header">
+        Editar Programa
+    </div>
+    <div class="card-body">
+        <form (ngSubmit) = "enviarDatos()" [formGroup] = "formularioDeProgramas">
+
+            <div class="mb-3">
+                <label for="" class="form-label">ID: </label>
+                <input type="text" class="form-control" name="" id="" formControlName="id" aria-describedby="helpId" placeholder="" readonly> 
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Descripcion: </label>
+                <input type="text" class="form-control" name="" id="" formControlName="descripcion" aria-describedby="helpId" placeholder="">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Sigla: </label>
+                <input type="email" class="form-control" name="" id="" formControlName="sigla" aria-describedby="helpId" placeholder="">
+            </div>
+
+            <button class="btn btn-success" type="submit">Editar</button> &nbsp;
+            <button class="btn btn-danger" routerLink="/listar-programa" type="button">Cancelar</button>
+        </form>
+    </div>
+    
+</div>
+

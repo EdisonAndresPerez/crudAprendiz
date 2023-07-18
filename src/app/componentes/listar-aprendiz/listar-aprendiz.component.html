@@ -1,0 +1,40 @@
+<div class="card">
+
+    <div class="card-header">
+        Lista de Aprendices
+    </div>
+
+    <div class="card-body">
+        
+        <div class="table-responsive">
+
+            <table class="table table-primary">
+                <thead>
+                    <br>
+                    <tr>
+                        <th scope="col">ID:</th>
+                        <th scope="col">Nombre:</th>
+                        <th scope="col">Correo:</th>
+                        <th scope="col">Acciones:</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+
+                    <tr *ngFor = "let aprendiz of aprendices ; let iControl = index">
+                        <td scope="row">{{aprendiz.ID}}</td>
+                        <td>{{aprendiz.nombre}}</td>
+                        <td>{{aprendiz.correo}}</td>
+                        <td>
+                            <a class="btn btn-warning" routerLink="/editar-aprendiz/{{aprendiz.ID}}" class="btn btn-warning">Editar</a>&nbsp;
+                            <a class="btn btn-danger" (click)="borrarAprendiz(aprendiz.ID , iControl)" role="button">Eliminar</a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <a class="btn btn-info" routerLink="/agregar-aprendiz" >Agregar un nuevo Aprendiz</a>
+ 
+    </div>
+</div>
